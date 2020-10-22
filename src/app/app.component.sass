@@ -1,5 +1,9 @@
+@import 'src/colores-personalizados'
+
 *
-  border: 1px solid red
+  font-family: 'Quicksand', sans-serif
+  font-weight: bold
+
 
 nav
   background-color: #010138
@@ -14,7 +18,11 @@ nav
 
   mat-toolbar
     background-color: #010138
-    color: white
+    color: #ECECEC
+
+  button
+    height: 100%
+
 
   .logo
     width: 45px
@@ -24,15 +32,45 @@ header.cabecera-inicio
   background-color: #010138
   background-image: url("/assets/img/deco/1.svg")
   background-repeat: no-repeat
-  background-attachment: fixed
   background-position: center
-  height: 90vh
-  padding-top: 10vh
-
-  color: white
+  color: #ECECEC
 
   .container-fluid
-    height: 100vh
-
     .row
       height: 100vh
+      padding-top: 10vh
+
+  .logo
+    max-width: 500px
+    margin-bottom: 3em
+
+  .ddw
+    font-size: 1.3em
+
+  .ilus-1, .ilus-2
+    width: 70%
+    max-height: 50vh
+
+  .ilus-1
+    height: 20em
+    float: left
+
+
+  .ilus-2
+    height: 20em
+    float: right
+
+  a.ddw
+    color: white
+    text-decoration: none
+    line-height: 2em
+
+  @media (max-width: 992px)
+    .ilus-2
+      visibility: hidden
+    *
+      font-size: 12px
+
+section.portfolio
+  min-height: 100vh
+  background-image: linear-gradient($color-blue, black)
