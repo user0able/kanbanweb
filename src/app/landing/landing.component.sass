@@ -1,0 +1,38 @@
+@import 'src/colores-personalizados'
+
+#cabecera
+  height: 100vh
+  width: 100%
+  background-color: $primary
+  color: $primary-t
+
+
+#ilus-1
+  position: relative
+  top: -40vh
+  max-width: 100%
+  width: 20em
+
+#ilus-2
+  position: relative
+  top: -100vh
+  max-width: 100%
+  width: 18em
+  display: none
+  visibility: hidden
+
+
+@media (min-width: 993px)
+  // Desde 992
+  #ilus-1
+    position: relative
+    top: -90vh
+    width: 22em
+
+  #ilus-2
+    position: relative
+    top: -90vh
+    max-width: 100%
+    width: 18em
+    display: block
+    visibility: visible
