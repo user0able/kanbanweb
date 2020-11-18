@@ -1,5 +1,5 @@
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 
 /** @title Responsive sidenav */
 @Component({
@@ -7,13 +7,19 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
   templateUrl: 'sidenav-responsive.component.html',
   styleUrls: ['sidenav-responsive.component.sass'],
 })
-export class SidenavResponsiveExample implements OnDestroy {
+export class SidenavResponsiveComponent implements OnInit, OnDestroy {
   mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav = [
+    "Portafolio",
+    "Habilidades",
+    "Blog",
+
+  ];
+
 
   fillerContent = Array.from({length: 50}, () =>
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -22,7 +28,7 @@ export class SidenavResponsiveExample implements OnDestroy {
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 100%)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
@@ -32,9 +38,7 @@ export class SidenavResponsiveExample implements OnDestroy {
   }
 
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+
+  ngOnInit(): void {
+  }
 }
-
-
-/**  Copyright 2020 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license */
