@@ -1,14 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'node_modules/flexboxgrid-sass/flexboxgrid'
 
+@import 'node_modules/flexboxgrid-sass/flexboxgrid'
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+@import 'src/colores-personalizados'
+
+
+$font-h: 'Quicksand', sans-serif
+$font-p: 'Lato', sans-serif
+
+body
+  padding: 0
+  margin: 0
+  font-size: 16px
 
 p, h1, h2, h3, h4, h5, h6
   padding: 0
   margin: 0
 
-body
-  padding: 0
-  margin: 0
+p
+  font-size: 1.4rem
+  line-height: 1.3em
+  font-weight: 400
+  font-family: $font-p
+  letter-spacing: -0.25px
+  margin-bottom: 4px
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-h
+
+h1
+  font-size: 48px
+  line-height: 0.9
+  letter-spacing: -1.5
+  font-weight: bolder
+
+h2
+  font-size: 36px
+  letter-spacing: -0.5px
+  font-weight: bolder
+
+h3
+  font-size: 32px
+  letter-spacing: 0
+
+h4
+  font-size: 28px
+  letter-spacing: 0.25px
+
+h5
+  font-size: 24px
+  letter-spacing: 0
+
+h6
+  font-size: 20px
+  letter-spacing: 0.15px
+
+h1.titulo
+  font-size: 96px
+  line-height: 0.9
+  letter-spacing: -1.5
+  font-weight: bolder
+
+h2.subtitulo
+  font-size: 60px
+  letter-spacing: -0.5px
+
+h2.extra
+  font-size: 7rem
+  letter-spacing: -0.5px
+
 
 .container
   max-width: 1200px
@@ -26,7 +87,7 @@ body
 
 .zero-height
   height: 0
-
-
-
+  padding: 0
+  margin: 0
+  width: 100%
 
